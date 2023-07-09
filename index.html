@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="">
+        <input type="button" value="Desafio 1  :Mostrar mayores 10 " id="boton" onclick="numerosPares() ">
+        <input type="button" value="Desafio 2  :PErsona joven " id="boton" onclick="desafio2() ">
+        <input type="button" value="Desafio 3  :Numero ocurrencia " id="boton" onclick="desafio3() ">
+    </form>
+
+    <p id="datos">
+
+    </p>
+
+    <script >
+    function numerosPares () {
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const cuadrados = [];
+
+        numeros.forEach((i) => {
+            cuadrados.push(i*i);
+        });
+
+        const resultado = obtenerNumerosParesElevadosAlCuadradoMayoresQue10(cuadrados);
+
+        alert(resultado);
+    }
+    function obtenerNumerosParesElevadosAlCuadradoMayoresQue10(cuadrados){
+        let resul = [];
+        cuadrados.forEach((i) => {
+            if (i > 10)
+                resul.push(i);
+        });
+        return resul;
+    }
+
+   function desafio2(){
+    const personas = [ { nombre: 'Juan', edad: 30 }, { nombre: 'Ana', edad: 25 }, { nombre: 'Pedro', edad: 27 }, { nombre: 'María', edad: 22 },];
+
+    let menor = personas[0]['edad'];
+    let nombre = "";
+    
+
+    personas.forEach((i) => {
+        if(menor > i['edad'] )
+            menor = i['edad'];
+            nombre = i['nombre'];
+    });
+
+    document.getElementById("datos").innerHTML = menor +" -- " + nombre;
+   }
+   function desafio3(){
+        const texto = [h,o,l,a,,, ,m,u,n,d,o];
+        let ocurrencia = 0 ;
+        let result = ""; 
+
+        texto.forEach((i)=>{
+            if(ocurrencia= texto  ){
+                ocurrencia= 0++ ;
+            }
+        });
+        texto.forEach((j)=>{
+            if(ocurrencia = 1 ){
+                result = 0++ ;
+            }
+        });
+        document.getElementById("datos").innerHTML = texto + result + ocurrencia;
+   }
+    </script>
+</body>
+</html>
